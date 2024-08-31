@@ -7,6 +7,12 @@ import { ClientsModule } from './clients/clients.module';
   imports: [
     ConfigModule.forRoot(),
     TypeOrmModule.forRoot({
+      ssl: process.env.STAGE === 'prod',
+      extra: {
+        ssl:
+          process.env.STAGE === 'prod' ? { rejectUnauthorized: false } : null,
+      },
+
       type: 'postgres',
       host: process.env.DB_HOST, //localhost
       port: +process.env.DB_PORT,
