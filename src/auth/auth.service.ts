@@ -70,7 +70,7 @@ export class AuthService {
 
     if (!bcrypt.compareSync(password, user.password))
       throw new UnauthorizedException(`Usuario o contraseña incorrecto`);
-
+    delete user.password;
     return {
       ...user,
       token: this.getJwtToken({
