@@ -7,9 +7,9 @@ async function bootstrap() {
   const logger = new Logger('Bootstrap');
 
   app.setGlobalPrefix('api');
-  
+
   app.enableCors({
-    origin: 'https://66d3a4ed62742695bbaf05b7--sweet-mousse-546ff7.netlify.app', // Reemplaza con la URL de tu frontend en Netlify
+    origin: 'https://sweet-mousse-546ff7.netlify.app', // Reemplaza con la URL de tu frontend en Netlify
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
   });
