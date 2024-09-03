@@ -11,7 +11,7 @@ import { ValidRoles } from './interfaces/valid-roles';
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
-  @Auth(ValidRoles.admin)
+  // @Auth(ValidRoles.admin)
   @Post('register')
   create(@Body() createUserDto: CreateUserDto) {
     return this.authService.createUser(createUserDto);
