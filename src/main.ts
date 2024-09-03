@@ -9,7 +9,7 @@ async function bootstrap() {
   app.setGlobalPrefix('api');
 
   app.enableCors({
-    origin: 'https://sweet-mousse-546ff7.netlify.app', // Reemplaza con la URL de tu frontend en Netlify
+    origin: ['https://sweet-mousse-546ff7.netlify.app', 'localhost:4200'], // Reemplaza con la URL de tu frontend en Netlify
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
   });
